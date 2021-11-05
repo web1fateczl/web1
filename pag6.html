@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><!--Idioma da página-->
+<head>
+    <!--metadados-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name= "description" content="ATIVIDADE HTML: COMENTÁRIOS, METADADOS, LISTAS E LAYOUT">
+    <meta name="keywords" content="HTML, listas, semanticos, comentários">
+    <meta name="author" content="Jingle Bell">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="imagem/favicon.ico"> <!--icone que fica na aba-->
+        <title>Atividade 5</title>
+</head>
+<body>
+    <header id="topo"> <!--Topo da página-->
+        <div id="acessibilidade">
+            <ul id="atalho">
+                <li><a href="#conteudo" accesskey="1" title="Ir diretamente para o conteúdo"> Ir para o conteúdo [1]</a></
+        li>
+                <li><a href="#menu" accesskey="2" title="Ir diretamente para o menu"> Ir para o menu [2]</a></li>
+                <li><a href="#rodape" accesskey="3" title="Ir diretamente para o rodapé"> Ir para o rodapé [3]</a></li>
+                <li id="pgacess"><a href ="acessibilidade.html" title="Ir diretamente para o acessibilidade"> 
+        Acessibilidade</a></li>
+                <li class="contraste"><a href="javascript:void(0);" id="contraste">Contraste Preto</a> </li>
+                <li class="contraste"><a href="javascript:void(0);" id="sem_contraste">Sem Contraste</a> </li>
+                <li class="fonte"><a href="javascript:void(0);" id="aumentar">A+</a> </li>
+                <li class="fonte"><a href="javascript:void(0);" id="diminuir">A-</a> </li>
+            </ul>
+        <img id= "FATEC_ZONA_LESTE" src="imagem/FATEC_ZONA_LESTE.png" alt= "Imagem do logo escrito FATEC em cinza, e, Zona Leste, abaixo em vermelho">
+        <nav>
+            <label for="bt_menu"><img src="imagem/icone_menu - Copy.png" alt="menu"> </label>
+            <input type="checkbox" id= "bt_menu">
+            <ul id="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pag1.html">Metadados</a></li>
+                <li><a href="pag2.html">Comentários</a></li>
+                <li><a href="javascript:void(0);">Listas</a>
+                    <ul>
+                        <li><a href="pag3.html">Lista ordenada</a></li>
+                        <li><a href="pag4.html">Lista não ordenada</a></li>
+                    </ul>
+                </li>
+                <li><a href="pag5.html">Layout</a></li>
+                <li><a href="pag6.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+    </header>
+    <main id="conteudo"><!--Conteúdo principal-->
+        <h1>Fale conosco</h1>
+        <ul class="breadcrumb">
+            <li><a href="index.html">Inicio</a></li>
+            <li>Fale Conosco</li>
+        </ul>
+        <section>
+            <forme name="contato" id="ctt" method="post">
+                <fieldset>
+                    <legend> Dados pessoais </legend>
+                        <label for="nome" class="req">Nome</label><br>
+                        <input type="text" name="nome" id="nome" required placeholder="Nome completo"><br> <!--placeholder 
+            = o texto que fica na caixinha | required = obrigatório preencimento-->
+                        <label for = "cpf" class="req">CPF</label><br>
+                        <input type= "number" name="cpf" id= "cpf" required placeholder="12345678900"><br>
+                        <label for="data" class="req">Data de nascimento</label><br>
+                        <input type="date" name="data" id="data" required><br>
+                        <label for=tel> Telefone para contato</label><br>
+                        <input type="tel" name="tel" id="tel" placeholder="(xx)xxxx-xxxx"><br>
+                        <label for = "email" class="req">E-mail</label><br>
+                        <input type= "email" name="email" id= "email" required placeholder="noome@provedor.com"><br>
+                </fieldset>
+                <fieldset>
+                    <legend> Dados de endereço</legend>
+                    <label for="cep" class="req">CEP</label><br>
+                    <input type="text" name= "cep" id="cep" required placeholder="01234-567"><br>
+                    <label for="rua">Rua</label><br>
+                    <input type="text" name= "rua" id="rua"><br>
+                    <label for="numero" class="req">Número</label><br>
+                    <input type="number" name="numero" id="numero" required placeholder="Caso não tenha, digitar 0"><br>
+                    <label for="complemento">Complemento</label><br>
+                    <input type="text" name="complemento" id="complemento" placeholder="Lote/Casa/Ponto de referencia"><br>
+                    <label for="bairro">Bairro</label><br>
+                    <input type="text" name="bairro" id="bairro"><br>
+                    <label for="cidade">Cidade</label><br>
+                    <input type="text" name="cidade" id="cidade"><br>
+                    <label for="estado">Estado</label><br>
+                    <input type="text" name="estado" id="estado"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Dados da mensagem</legend>
+                    <label for="assunto" class="req">Assunto</label>
+                    <select name="assunto" id="assunto" required>
+                        <option value="" selected disabled>Selecione um assunto</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="elogio">Elogios</option>
+                        <option value="reclamação">Reclamação</option>
+                     </select><br>
+                     <label for="mensagem" class="req">Mensagem</label><br>
+                     <textarea name="mensagem" id="mensagem" required placeholder="Digite a mensagem aqui" rown="10" 
+            cols="50"></textarea>
+                </fieldset>
+                <input type="submit" name="enviar" id="enviar" value="Enviar"> <input type="reset" name="limpar" 
+            id="limpar" value="Limpar">                       
+            </form>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+            </form>
+                      
+        </section>
+        
+    </main>
+    <footer id="rodape"><p>Site reproduzido por Jingle Bell &copy;2021</p></footer> <!---Rodapé da página-->
+</body>
+</html>
